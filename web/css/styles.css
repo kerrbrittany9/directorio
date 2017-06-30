@@ -1,0 +1,11 @@
+body {
+    background-color: mistyrose;
+}
+.jumbotron {
+    background-image: url('/../img/city2.jpg');
+    background-repeat: round;
+    color: white;
+}
+#align {
+    text-align: right;
+}

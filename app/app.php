@@ -16,11 +16,10 @@
         return $app['twig']->render('contact_form.html.twig', array('contacts' => Contact::getAll()));
     });
 
-    var_dump(Contact::getAll());
     $app->post('/create_contact', function () use ($app) {
         $contact = new Contact($_POST['first_name'], $_POST['last_name'], $_POST['phone'], $_POST['address']);
         $contact->save();
-        var_dump($contact);
+
             return $app['twig']->render('create_contact.html.twig', array('contacts' => $contact));
     });
 

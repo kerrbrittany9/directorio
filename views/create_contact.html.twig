@@ -1,21 +1,48 @@
 <html>
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/../css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="/../css/styles.css" type="text/css">
     <title>Contact</title>
 </head>
 <body>
-    {% if contacts is empty %}
-        <h4>Please fill out entire form using n/a when needed.</h4>
-    {% else %}
-        <h1>Contact</h1>
-        <ul>
-            <li>{{ contacts.getFirstName }} {{ contacts.getLastName }}</li>
+    <div class='container'>
+        <div class='jumbotron'>
+            <div class='row'>
+                <div class='col-md-6'>
+                    <h3>address book</h3>
+                    <h3>directorio</h3>
+                    <h3>addressbuch</h3>
+                    <h3>carnet d'adresses</h3>
+                    <h3>kitabu cha anwani</h3>
+                    <h3>jushoroku</h3>
+                    <h3>livro de endereços</h3>
+                </div>
+                <div class='col-md-3'>
+                </div>
+                <div class='col-md-3' id='align'>
+                    <h3>dizhi bu</h1>
+                    <h3>adres defteri</h3>
+                    <h3>pata pustika</h3>
+                    <h3>helu puke</h3>
+                    <h3>adres bukh</h3>
+                    <h3>dalil aleanawin</h3>
+                    <h3>osoitekirja</h3>
+                </div>
+            </div>
+        </div>
+            {% if contacts is empty %}
+                <h1>Please fill out entire form using n/a when needed.</h1>
+            {% else %}
+                <h1>Contact</h1>
                 <ul>
-                    <li>{{ contacts.getPhone }}</li>
-                    <li>{{ contacts.getAddress }}</li>
+                    <li>{{ contacts.getFirstName }} {{ contacts.getLastName }}</li>
+                        <ul>
+                            <li>{{ contacts.getPhone }}</li>
+                            <li>{{ contacts.getAddress }}</li>
+                        </ul>
                 </ul>
-        </ul>
-    {% endif %}
-    <h3><a href='/'>View Address Book</a></h2>
+            {% endif %}
+    <h4><a href='/'>Home</a></h4>
+    </div>
 </body>
 </html>
