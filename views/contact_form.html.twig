@@ -1,32 +1,42 @@
 <html>
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <title>Address Book</title>
 </head>
 <body>
-    <h1>Address Book</h1>
-    <p>Please enter contact info below:</p>
+    <div class="container">
+        <p>Please enter contact info below:</p>
 
-    <form action='/create_contact' method='post'>
-        <div class='form-group'>
-            <label for='first_name'>Enter First Name</label>
-            <input name='first_name' class='form-control' type='text'>
-        </div><br>
-        <div class='form-group'>
-            <label for='last_name'>Enter Last Name</label>
-            <input name='last_name' class='form-control' type='text'>
-        </div><br>
-        <div class='form-group'>
-            <label for='phone'>Enter Phone Number</label>
-            <input name='phone' class='form-control' type='text'>
-        </div><br>
-        <div class='form-group'>
-            <label for='address'>Enter Address</label>
-            <input name='address' class='form-control' type='text'>
-        </div><br>
-        <button type='submit' class='btn'>Add Contact</button>
-    </form>
-    <form action='/delete_contacts'>
-        <button type='submit' class='btn'>Delete</button>
-    </form>
+        <form action='/create_contact' method='post'>
+            <div class='form-group'>
+                <label for='first_name'>Enter First Name</label>
+                <input name='first_name' class='form-control' type='text'>
+            </div><br>
+            <div class='form-group'>
+                <label for='last_name'>Enter Last Name</label>
+                <input name='last_name' class='form-control' type='text'>
+            </div><br>
+            <div class='form-group'>
+                <label for='phone'>Enter Phone Number</label>
+                <input name='phone' class='form-control' type='text'>
+            </div><br>
+            <div class='form-group'>
+                <label for='address'>Enter Address</label>
+                <input name='address' class='form-control' type='text'>
+            </div><br>
+            <button type='submit' class='btn'>Add Contact</button>
+        </form>
+        <h1>Adddress Book</h1>
+            <form action='/delete_contacts'>
+                <button type='submit' class='btn'>Clear Contacts</button>
+            </form>
+                {% for contact in contacts %}
+                    <h3>{{ contact.getFirstName }} {{ contact.getLastName }}</h3>
+                    <p>{{ contact.getPhone }}</p>
+                    <p>{{ contact.getAddress }}</p>
+                    </ul>
+                {% endfor %}
+    </div>
+
 </body>
 </html>
