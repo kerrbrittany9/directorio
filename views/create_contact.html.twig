@@ -31,13 +31,13 @@
             </div>
         </div>
         <div class='well'>
-            {% if contact is empty %}
+            {% if contacts is empty %}
                 <h1>Please fill out entire form. Use n/a when needed.</h1>
             {% else %}
                 <h1>Contact</h1>
-                    <h3>{{ contact.getFirstName }} {{ contact.getLastName }}</h3>
-                        <p>{{ contact.getPhone }}</p>
-                        <p>{{ contact.getAddress }}</p>
+                    <h3>{{ contacts.getFirstName }} {{ contacts.getLastName }}</h3>
+                        <p>{{ contacts.getPhone }}</p>
+                        <p>{{ contacts.getAddress }}</p>
             {% endif %}
             <h4><a href='/'>Home</a></h4>
         </div>

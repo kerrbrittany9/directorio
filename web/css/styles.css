@@ -1,5 +1,6 @@
 body {
-    background-color: antiquewhite;
+    background-color: #212121;
+    color:white;
 }
 .jumbotron {
     background-image: url('/../img/city2.jpg');
@@ -13,5 +14,6 @@ body {
 .well {
     padding-left: 100px;
     padding-right: 100px;
-    background-color: floralwhite;
+    background-color: #2E2E2E;
+    border: black;
 }
