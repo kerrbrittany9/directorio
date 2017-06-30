@@ -1,18 +1,18 @@
-# _{Application Name}_
+# _Address Book_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _Use twig and silex to create an address book, June 30, 2017_
 
-#### By _**{List of contributors}**_
+#### By _**Brittany Kerr**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_The web app is a practice in using Twig and Silex for object-oriented PHP. The user can enter a contact; store, retrieve and delete it._
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
+* _Sign into github and copy URL_
+* _Enter your local console and type command "git clone [add URL]"_
+* _Enter the folder from your Desktop by typing "cd friday"_
 * _easy-to-understand_
 * _format_
 
