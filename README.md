@@ -12,18 +12,20 @@ _The web app is a practice in using Twig and Silex for object-oriented PHP. The 
 
 * _Sign into github and copy URL_
 * _Enter your local console and type command "git clone [add URL]"_
-* _Enter the folder from your Desktop by typing "cd address-PHP"_
+* _Enter the folder from your Desktop by typing "cd /Desktop/address-PHP" into console_
 * _Type "atom . " to open and view code from local terminal_
 * _To connect with browser enter web folder by typing "cd web" in console. Type "php -S localhost:8000"_
 * _In browser, type "localhost:8000" to view home page._
 
 ## Specs
 
-* User can input contact information and it is organized and saved to contacts:
-    * Input: John Doe, 367-5309, 123 Ave_
-    * Output: Name: John Doe
-              Phone: 367-5309
-              Address: 123 Ave
+* User can input contact information and is sent to a 'Contact' page with information listed:
+    * Input: John Doe, 367-5309, 123 Ave_ on form
+    * Output: Contact: John Doe
+                       phone: 367-5309
+                       address: 123 Ave
+* User can click on 'Home' button from /create_contact to bring them back /home and view all contacts.
+    * Inpu
 
 ## Technologies Used
 

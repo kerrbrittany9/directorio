@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class='well'>
-            <h1>Please enter contact info below:</h1>
+            <h1>please enter contact info below:</h1>
 
             <form action='/create_contact' method='post'>
                 <div class='form-group'>
@@ -50,26 +50,22 @@
                     <label for='address'>Enter Address</label>
                     <input name='address' class='form-control' type='text'>
                 </div>
-                <button type='submit' class='btn'>Add Contact</button>
+                <button type='submit' class='btn'>add contact</button>
             </form>
         </div>
         <div class= 'well'>
-            <h1>Adddress Book</h1>
-                <form action='/delete_contacts'>
-                    <button type='submit' class='btn'>Clear Contacts</button>
-                </form>
-                <div class='row'>
-                    <div class='col-md-4'>
-                        {% for contact in contacts %}
-                            <h3>{{ contact.getFirstName }} {{ contact.getLastName }}</h3>
-                            <p>{{ contact.getPhone }}</p>
-                            <p>{{ contact.getAddress }}</p>
-                            </ul>
-                        {% endfor %}
-                    </div>
-                </div>
+            <h1>adddress book</h1>
+            <form action='/delete_contacts'>
+                <button type='submit' class='btn'>clear contacts</button>
+            </form>
+            {% if contacts is not empty %}
+                {% for contact in contacts %}
+                    <h3>{{ contact.getFirstName }} {{ contact.getLastName }}</h3>
+                    <p>{{ contact.getPhone }}</p>
+                    <p>{{ contact.getAddress }}</p>
+                {% endfor %}
+            {% endif %}
         </div>
     </div>
-
 </body>
 </html>

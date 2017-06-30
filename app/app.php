@@ -12,6 +12,7 @@
 
     $app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __DIR__.'/../views'
     ));
+
     $app->get('/', function() use ($app) {
         return $app['twig']->render('contact_form.html.twig', array('contacts' => Contact::getAll()));
     });
@@ -20,11 +21,11 @@
         $contact = new Contact($_POST['first_name'], $_POST['last_name'], $_POST['phone'], $_POST['address']);
         $contact->save();
             return $app['twig']->render('create_contact.html.twig', array('contacts' => $contact));
-            var_dump($contact);
     });
 
     $app->get('/', function() use($app) {
         return $app['twig']->render('contact_form.html.twig', array('contacts' => Contact::getAll()));
+
     });
 
     $app->get('/delete_contacts', function() use ($app) {
@@ -32,5 +33,6 @@
         return $app['twig']->render('delete_contacts.html.twig');
     });
 
+
     return $app;
-   ?>
+?>
