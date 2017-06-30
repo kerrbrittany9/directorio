@@ -8,6 +8,7 @@
     if (empty($_SESSION['list_of_contacts'])) {
             $_SESSION['list_of_contacts'] = array();
     }
+    
     $app = new Silex\Application();
 
     $app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __DIR__.'/../views'
@@ -32,7 +33,6 @@
         Contact::deleteAll();
         return $app['twig']->render('delete_contacts.html.twig');
     });
-
 
     return $app;
 ?>
