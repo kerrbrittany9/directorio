@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>Contact</title>
+</head>
+<body>
+    {% if contacts is empty %}
+        <h4>Please fill out entire form using n/a when needed.</h4>
+    {% else %}
+        <h1>Contact</h1>
+        <ul>
+            <li>{{ contacts.getFirstName }} {{ contacts.getLastName }}</li>
+                <ul>
+                    <li>{{ contacts.getPhone }}</li>
+                    <li>{{ contacts.getAddress }}</li>
+                </ul>
+        </ul>
+    {% endif %}
+    <h3><a href='/'>Add Another</a></h2>
+</body>
+</html>

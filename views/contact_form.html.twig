@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Address Book</title>
+</head>
+<body>
+    <h1>Address Book</h1>
+    <p>Please enter contact info below:</p>
+
+    <form action='/create_contact' method='post'>
+        <div class='form-group'>
+            <label for='first_name'>Enter First Name</label>
+            <input name='first_name' class='form-control' type='text'>
+        </div><br>
+        <div class='form-group'>
+            <label for='last_name'>Enter Last Name</label>
+            <input name='last_name' class='form-control' type='text'>
+        </div><br>
+        <div class='form-group'>
+            <label for='phone'>Enter Phone Number</label>
+            <input name='phone' class='form-control' type='text'>
+        </div><br>
+        <div class='form-group'>
+            <label for='address'>Enter Address</label>
+            <input name='address' class='form-control' type='text'>
+        </div><br>
+        <button type='submit' class='btn'>Add Contact</button>
+    </form>
+    <form action='/delete_contacts'>
+        <button type='submit' class='btn'>Delete</button>
+    </form>
+</body>
+</html>

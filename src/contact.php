@@ -19,24 +19,24 @@
         {
             $this->first_name = (string) $new_first_name;
         }
-        function setFirstName($new_last_name)
+        function setLastName($new_last_name)
         {
             $this->last_name = (string) $new_last_name;
         }
 
-        function setFirstName($new_phone)
+        function setPhone($new_phone)
         {
             $this->phone = (string) $new_phone;
         }
 
-        function setFirstName($new_address)
+        function setAddress($new_address)
         {
             $this->address = (string) $new_address;
         }
 
         function getFirstName()
         {
-            return $this->first_name
+            return $this->first_name;
         }
 
         function getLastName()
@@ -54,6 +54,20 @@
             return $this->address;
         }
 
+        function save()
+        {
+            array_push($_SESSION['list_of_contacts'], $this);
+        }
+
+        static function getAll()
+        {
+            return $_SESSION['list_of_contacts'];
+        }
+
+        static function deleteAll()
+        {
+            $_SESSION['list_of_contacts'] = array();
+        }
 
     }
 

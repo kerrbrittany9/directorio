@@ -2,21 +2,32 @@
     date_default_timezone_set('America/Los_Angeles');
     require_once __DIR__."/../vendor/autoload.php";
     require_once __DIR__."/../src/contact.php";
+
     session_start();
+
     if (empty($_SESSION['list_of_contacts'])) {
             $_SESSION['list_of_contacts'] = array();
     }
     $app = new Silex\Application();
+
     $app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __DIR__.'/../views'
     ));
 
+    $app->get("/", function() use ($app) {
+        return $app['twig']->render('contact_form.html.twig');
+    });
 
-
-    $app->get("/", function () use ($app) {
-        $contact = Contact($_GET['first_name'], $_GET['last_name'], $_GET['phone'], $_GET['address']);
+    $app->post('/create_contact', function () use ($app) {
+        $contact = new Contact($_POST['first_name'], $_POST['last_name'], $_POST['phone'], $_POST['address']);
         $contact->save();
+        var_dump($contact);
+            return $app['twig']->render('create_contact.html.twig', array('contacts' => $contact));
+    });
 
-        return $app['twig']->render('contact.html.twig', array('contact' => $contact));
-    }
+    $app->get('/delete_contacts', function() use ($app) {
+        Contact::deleteAll();
+        return $app['twig']->render('delete_contacts.html.twig');
+    });
+    
     return $app;
    ?>
