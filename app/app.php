@@ -9,5 +9,14 @@
     $app = new Silex\Application();
     $app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __DIR__.'/../views'
     ));
+
+
+
+    $app->get("/", function () use ($app) {
+        $contact = Contact($_GET['first_name'], $_GET['last_name'], $_GET['phone'], $_GET['address']);
+        $contact->save();
+
+        return $app['twig']->render('contact.html.twig', array('contact' => $contact));
+    }
     return $app;
    ?>
