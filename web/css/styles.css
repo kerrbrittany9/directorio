@@ -1,5 +1,5 @@
 body {
-    background-color: mistyrose;
+    background-color: antiquewhite;
 }
 .jumbotron {
     background-image: url('/../img/city2.jpg');
@@ -8,4 +8,10 @@ body {
 }
 #align {
     text-align: right;
+}
+
+.well {
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: floralwhite;
 }

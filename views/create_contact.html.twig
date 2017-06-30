@@ -30,19 +30,17 @@
                 </div>
             </div>
         </div>
-            {% if contacts is empty %}
-                <h1>Please fill out entire form using n/a when needed.</h1>
+        <div class='well'>
+            {% if contact is empty %}
+                <h1>Please fill out entire form. Use n/a when needed.</h1>
             {% else %}
                 <h1>Contact</h1>
-                <ul>
-                    <li>{{ contacts.getFirstName }} {{ contacts.getLastName }}</li>
-                        <ul>
-                            <li>{{ contacts.getPhone }}</li>
-                            <li>{{ contacts.getAddress }}</li>
-                        </ul>
-                </ul>
+                    <h3>{{ contact.getFirstName }} {{ contact.getLastName }}</h3>
+                        <p>{{ contact.getPhone }}</p>
+                        <p>{{ contact.getAddress }}</p>
             {% endif %}
-    <h4><a href='/'>Home</a></h4>
+            <h4><a href='/'>Home</a></h4>
+        </div>
     </div>
 </body>
 </html>
