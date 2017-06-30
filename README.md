@@ -10,7 +10,7 @@ _The web app is a practice in using Twig and Silex for object-oriented PHP. The 
 
 ## Setup/Installation Requirements
 
-* _Sign into github and copy URL_
+* _Sign into github and copy 'https://github.com/kerrbrittany9/directorio.git'_
 * _Enter your local console and type command "git clone [add URL]"_
 * _Enter the folder from your Desktop by typing "cd /Desktop/address-PHP" into console_
 * _Type "atom . " to open and view code from local terminal_
@@ -25,12 +25,8 @@ _The web app is a practice in using Twig and Silex for object-oriented PHP. The 
 * User can click on 'home' button from create_contact page to view all contacts.
     * Input: click 'home'
     * Output:   address book:   
-            * John Doe   
-            367-5309  
-            123 Ave
-            * Mary Contrary
-            122-1233
-            234 Blvd
+            * John Doe  367-5309 123 Ave
+            * Mary Contrary 122-1233 234 Blvd
 * User can click 'clear contacts' on home page to clear all contacts and bring them to a verification page.
     * Input: click 'clear contacts'
     * Output: /delete_contacts page states 'address book cleared'
