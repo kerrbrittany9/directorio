@@ -1,71 +1,72 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" href="/../css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="/../css/styles.css" type="text/css">
+  <head>
+    <link rel='stylesheet' href='/../css/bootstrap.css' type='text/css'>
+    <link rel='stylesheet' href='/../css/styles.css' type='text/css'>
     <title>Address Book</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class='container'>
-        <div class='jumbotron'>
-            <div class='row'>
-                <div class='col-md-6'>
-                    <h3>address book</h3>
-                    <h3>directorio</h3>
-                    <h3>addressbuch</h3>
-                    <h3>carnet d'adresses</h3>
-                    <h3>kitabu cha anwani</h3>
-                    <h3>jushoroku</h3>
-                    <h3>livro de endereços</h3>
-                </div>
-                <div class='col-md-3'>
-                </div>
-                <div class='col-md-3' id='align'>
-                    <h3>dizhi bu</h1>
-                    <h3>adres defteri</h3>
-                    <h3>pata pustika</h3>
-                    <h3>helu puke</h3>
-                    <h3>adres bukh</h3>
-                    <h3>dalil aleanawin</h3>
-                    <h3>osoitekirja</h3>
-                </div>
-            </div>
+      <div class='jumbotron'>
+        <div class='row'>
+          <div class='col-md-6'>
+          <h3>address book</h3>
+          <h3>directorio</h3>
+          <h3>addressbuch</h3>
+          <h3>carnet d'adresses</h3>
+          <h3>kitabu cha anwani</h3>
+          <h3>jushoroku</h3>
+          <h3>livro de endereços</h3>
+          </div>
+          <div class='col-md-3'>
+          </div>
+          <div class='col-md-3' id='align'>
+            <h3>dizhi bu</h1>
+            <h3>adres defteri</h3>
+            <h3>pata pustika</h3>
+            <h3>helu puke</h3>
+            <h3>adres bukh</h3>
+            <h3>dalil aleanawin</h3>
+            <h3>osoitekirja</h3>
+          </div>
         </div>
-        <div class='well'>
-            <h1>please enter contact info below:</h1>
+      </div>
+      <div class='well'>
+        <h1>please enter contact info below:</h1>
 
-            <form action='/create_contact' method='post'>
-                <div class='form-group'>
-                    <label for='first_name'>Enter First Name</label>
-                    <input name='first_name' class='form-control' type='text'>
-                </div>
-                <div class='form-group'>
-                    <label for='last_name'>Enter Last Name</label>
-                    <input name='last_name' class='form-control' type='text'>
-                </div>
-                <div class='form-group'>
-                    <label for='phone'>Enter Phone Number</label>
-                    <input name='phone' class='form-control' type='text'>
-                </div>
-                <div class='form-group'>
-                    <label for='address'>Enter Address</label>
-                    <input name='address' class='form-control' type='text'>
-                </div>
-                <button type='submit' class='btn'>add contact</button>
-            </form>
-        </div>
-        <div class= 'well'>
-            <h1>adddress book</h1>
-            <form action='/delete_contacts'>
-                <button type='submit' class='btn'>clear contacts</button>
-            </form>
-            {% if contacts is not empty %}
-                {% for contact in contacts %}
-                    <h3>{{ contact.getFirstName }} {{ contact.getLastName }}</h3>
-                    <p>{{ contact.getPhone }}</p>
-                    <p>{{ contact.getAddress }}</p>
-                {% endfor %}
-            {% endif %}
-        </div>
+        <form action='/create_contact' method='post'>
+          <div class='form-group'>
+            <label for='first_name'>Enter First Name</label>
+            <input name='first_name' class='form-control' required type='text'>
+          </div>
+          <div class='form-group'>
+            <label for='last_name'>Enter Last Name</label>
+            <input name='last_name' class='form-control' required type='text'>
+          </div>
+          <div class='form-group'>
+            <label for='phone'>Enter Phone Number</label>
+            <input name='phone' class='form-control'required type='text'>
+          </div>
+          <div class='form-group'>
+            <label for='address'>Enter Address</label>
+            <input name='address' class='form-control'required type='text'>
+          </div>
+          <button type='submit' class='btn'>add contact</button>
+        </form>
+      </div>
+      <div class= 'well'>
+        <h1>adddress book</h1>
+        <form action='/delete_contacts'>
+          <button type='submit' class='btn'>clear contacts</button>
+        </form>
+        {% if contacts is not empty %}
+          {% for contact in contacts %}
+            <h3>{{ contact.getFirstName }} {{ contact.getLastName }}</h3>
+            <p>{{ contact.getPhone }}</p>
+            <p>{{ contact.getAddress }}</p>
+          {% endfor %}
+        {% endif %}
+      </div>
     </div>
-</body>
+  </body>
 </html>

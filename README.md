@@ -10,30 +10,45 @@ _The web app is a practice in using Twig and Silex for object-oriented PHP. The 
 
 ## Setup/Installation Requirements
 
-* _Sign into github and copy 'https://github.com/kerrbrittany9/directorio.git'_
-* _Enter your local console and type command "git clone [add URL]"_
-* _Enter the folder from your Desktop by typing "cd /Desktop/address-PHP" into console_
-* _Type "atom . " to open and view code from local terminal_
-* _To connect with browser enter web folder by typing "cd web" in console. Type "php -S localhost:8000"_
-* _In browser, type "localhost:8000" to view home page._
+* Ensure that the following programs are downloaded to your computer:
+  * [MAMP](https://www.mamp.info/en/) for Windows or MacOS
+  * [PHP](https://secure.php.net/)
+  * [Composer](https://getcomposer.org/)
+* Sign into github and copy repository: https://github.com/kerrbrittany9/directorio.git
+* From your local console:
+  * Enter Desktop by typing "cd Desktop"
+  * Type "git clone [add above URL]".
+  * Type "cd directorio" to enter directory.
+  * Download dependencies by typing "composer install"
+  * To view webpage from browser type "cd web" and then "php -S localhost:8000" to start server.
+  * In browser, type "localhost:8000" to view home page.
 
-## Specs
+## Specifications
 
-* User inputs contact information and is sent to a 'Contact' page with information listed as an individual contact:
-    * Input: Name: John Doe, Phone: 367-5309, Address: 123 Ave_ on form
-    * Output: Contact: John Doe 367-530 123 Ave
-* User can click on 'home' button from create_contact page to view all contacts.
-    * Input: click 'home'
-    * Output:   address book:   
-            * John Doe  367-5309 123 Ave
-            * Mary Contrary 122-1233 234 Blvd
-* User can click 'clear contacts' on home page to clear all contacts and bring them to a verification page.
-    * Input: click 'clear contacts'
-    * Output: /delete_contacts page states 'address book cleared'
-
-## Known Bugs
-
-_Web app cannot identify an empty contact, therefore the empty contact warning is not given._
+```
+Behavior: User visits homepage
+  * Input: User fills out contact information form and clicks 'add contact' button.
+  * Output: User is brought to 'contact' page with their info on display
+    ```
+    Contact: John Doe  367-5309 123 Ave
+```
+Behavior: User makes contact.
+  * Input: User clicks 'home' button on 'contact' page.
+  * Output: User is brought back to homepage where their info is stored with others in the address book.
+```
+    Address Book: * John Doe, 367-5309, 123 Ave
+                  * Mary Contrary 122-1233 234 Blvd
+```
+Behavior: User deletes contacts.
+  * Input: User clicks 'clear contacts' button on homepage.
+  * Output: User is brought to verification page.
+  ```
+      'address book cleared' appears on page
+```
+Behavior: User returns to homepage.
+  * Input: User clicks on 'home' button at the bottom of delete verification page.
+  * Output: User is brought back to homepage with blank form and and no contacts in address book.
+  ```
 
 ## Technologies Used
 
