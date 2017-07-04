@@ -29,7 +29,8 @@ _The web app is a practice in using Twig and Silex for object-oriented PHP. The 
 Behavior: User visits homepage
   * Input: User fills out contact information form and clicks 'add contact' button.
   * Output: User is brought to 'contact' page with their info on display
-    ```
+
+```
     Contact: John Doe  367-5309 123 Ave
 ```
 Behavior: User makes contact.
